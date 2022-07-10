@@ -1,0 +1,40 @@
+.header {
+    grid-area: header;
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #fff;
+    min-height: 20px;
+    width: 70%;
+}
+
+.login{
+    color: black;
+    font-size: 25px;
+}
+
+.loginWrapper {
+    margin: 20px;
+}
+
+.loginName{
+    font-size: 25px;
+    color: black;
+    margin: 0;
+    text-decoration: none;
+}
+
+.loginBlock{
+    display: flex;
+    align-items: center;
+}
+
+.loginImg{
+    height: 45px;
+    width: 45px;
+    margin-left: 20px;
+    border-radius: 50%;
+}
+
+
+  

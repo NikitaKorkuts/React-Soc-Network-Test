@@ -1,15 +1,15 @@
 import React from 'react'
-import s from "../FindFriends.module.css";
+import s from './Pagination.module.css';
 
-let Pagination = ({totalUsersCount, currentPage, onPageChanged, pageSize}) => {
-    let pagesCount = Math.ceil(totalUsersCount / pageSize);
+let Pagination = ({totalItemsCount, currentPage, onPageChanged, pageSize, halfPaginationSize = 4}) => {
+    let pagesCount = Math.ceil(totalItemsCount / pageSize);
 
-    let minPage = currentPage - 3;
+    let minPage = currentPage - halfPaginationSize;
     if (minPage < 1) {
         minPage = 1;
     }
 
-    let maxPage = currentPage + 3;
+    let maxPage = currentPage + halfPaginationSize;
     if (maxPage > pagesCount) {
         maxPage = pagesCount;
     }
@@ -26,7 +26,7 @@ let Pagination = ({totalUsersCount, currentPage, onPageChanged, pageSize}) => {
 
     let pages = [];
     for(let i = minPage;i <= maxPage;i++) {
-        let page = <a onClick={() => onPageChanged(i)} className={i === currentPage ? s.active : null}>{i}</a>;
+        let page = <a onClick={() => onPageChanged(i)} key={i} className={i === currentPage ? s.active : null}>{i}</a>;
         pages.push(page);
     }
 

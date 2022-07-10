@@ -9,8 +9,12 @@
     margin-bottom: 10px;
 }
 
-.infoName p{
+
+
+.infoName a{
     font-size: 25px;
+    color: black;
+    text-decoration: none;
 }
 
 .infoInfo {
@@ -22,6 +26,10 @@
     height: 120px
 }
 
-.infoAddBtn input{
+.infoFriend button{
     padding: 3px 20px;
+}
+
+.infoFriend span{
+    margin-right: 20px;
 }

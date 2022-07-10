@@ -1,31 +1,25 @@
 import React from 'react';
-import s from "./Messages.module.css";
-import MessageItem from "./Message/Message";
-import {addMessageActionCreator, setMessageTextActionCreator} from "../../../redux/messanger-reducer";
+import {addMessageActionCreator} from "../../../redux/messanger-reducer";
+import {connect} from "react-redux";
+import Messages from "./Messages";
+import {reset} from "redux-form";
 
-const Messages = (props) => {
-
-    let messagesElements = (state.messages).map(m => <MessageItem message={m.message}/>);
-
-    let messageText = store.getState().messanger.messageText;
-
-    let addMessage = () => {
-        store.dispatch(addMessageActionCreator());
+const mapStateToProps = (state) => {
+    return {
+        messages: state.messanger.messages
     }
-    let updateMessageText = (e) => {
-        let message = e.target.value;
-        store.dispatch(setMessageTextActionCreator(message));
+}
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addMessage: (value) => {
+            dispatch(addMessageActionCreator(value));
+        },
+        resetMessageForm: (dispatch) => {
+            dispatch(reset('sendMessage'));
+        }
     }
-
-    return (
-        <div className={s.messages}>
-            {messagesElements}
-            <div className={s.sendMessage}>
-                <textarea onChange={props.updateMessageText} className={s.writeMessage} value={props.messageText} placeholder={'Write message...'}></textarea>
-                <input onClick={props.addMessage} value="Send" className={s.sendBtn} type="submit"/>
-            </div>
-        </div>
-    )
 }
 
-export default Messages
+const MessagesContainer = connect(mapStateToProps, mapDispatchToProps)(Messages)
+
+export default MessagesContainer

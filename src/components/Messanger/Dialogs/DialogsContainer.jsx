@@ -1,17 +1,13 @@
 import React from 'react'
-import s from "./Dialogs.module.css"
-import DialogItem from "./Dialog/Dialog";
+import {connect} from "react-redux";
+import Dialogs from "./Dialogs";
+import {withAuthRedirect} from "../../../hoc/withAuthRedirect";
+import {compose} from "redux";
 
-const Dialogs = (props) => {
-
-    let dialogsElements = (state.dialogs).map(d => <DialogItem id={d.id} name={d.name}/>);
-
-    return (
-        <div className={s.dialogs}>
-            <h1 className={s.header}>Dialogs</h1>
-            {dialogsElements}
-        </div>
-    )
+const mapStateToProps = (state) => {
+    return {
+        dialogs: state.messanger.dialogs
+    }
 }
 
-export default Dialogs
+export default compose(connect(mapStateToProps), withAuthRedirect)(Dialogs)

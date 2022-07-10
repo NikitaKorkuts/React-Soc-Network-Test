@@ -1,22 +1,48 @@
-import React from 'react'
-import s from './User.module.css'
+import React from 'react';
+import s from './User.module.css';
+import {NavLink} from "react-router-dom";
 
-const User = () => {
+const User = (props) => {
+    const onAddToFriends = () => {
+        props.follow(props.id)
+    }
+    const onRemoveFromFriends = () => {
+        props.unfollow(props.id);
+    }
+    const getIsFriend = (isFriend) => {
+        if (isFriend) {
+            return (
+                <div className={s.infoFriend}>
+                    <span>&#10003; Your friend</span>
+                    <button disabled={props.isFollowingInProgress.some(id => id === props.id)} onClick={onRemoveFromFriends}>Remove From Friends</button>
+                </div>
+            )
+        } else {
+            return (
+                <div className={s.infoFriend}>
+                    <button disabled={props.isFollowingInProgress.some(id => id === props.id)} onClick={onAddToFriends}>Add To Friends</button>
+                </div>
+            )
+        }
+    }
+
     return (
         <div className={s.user}>
             <div className={s.userAvatar}>
-                <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png" alt="avatar"/>
+                <NavLink to={`/profile/${props.id}`}>
+                    <img src={props.imgUrl}/>
+                </NavLink>
             </div>
             <div className={s.userInfo}>
                 <div className={s.infoName}>
-                    <p>Artem Smirnov</p>
+                    <NavLink to={`/profile/${props.id}`}>
+                        <p>{props.name}</p>
+                    </NavLink>
                 </div>
                 <div className={s.infoInfo}>
-                    <p>Age: 29, City: Saint-Petersburg, Education: MGU</p>
+                    <p>Age: {props.age}, City: {props.city}, Education: {props.education}</p>
                 </div>
-                <div className={s.infoAddBtn}>
-                    <input type="submit" value="Add To Friends"/>
-                </div>
+                {getIsFriend(props.isFriend)}
             </div>
         </div>
     )

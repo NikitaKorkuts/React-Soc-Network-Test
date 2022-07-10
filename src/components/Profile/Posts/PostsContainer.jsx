@@ -1,35 +1,25 @@
 import React from 'react';
-import Post from './Post/Post';
-import s from './Posts.module.css';
-import {addPostActionCreator, setPostTextActionCreator} from "../../../redux/profile-reducer";
+import {addPostActionCreator} from "../../../redux/profile-reducer";
+import Posts from "./Posts";
+import {connect} from "react-redux";
+import {reset} from "redux-form";
 
-
-
-const Posts = (props) => {
-
-    let postsElements = (props.state.posts).map( p => <Post likesCount={p.likesCount} message={p.message}/> )
-
-    let addPost = () => {
-        props.dispatch(addPostActionCreator())
+const mapStateToProps = (state) => {
+    return {
+        posts: state.profile.posts
     }
-
-    let onPostChange = (e) => {
-        let message = e.target.value;
-        props.dispatch(setPostTextActionCreator(message));
+}
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addPost: (value) => {
+            dispatch(addPostActionCreator(value));
+        },
+        resetPost: (dispatch) => {
+            dispatch(reset('sendPost'));
+        }
     }
-
-    return (
-        <div>
-            <div className={s.sendPost}>
-                <h1>My posts</h1>
-                <textarea onChange={onPostChange}  name="post" id="post" value={props.state.postText} />
-                <input onClick={addPost} type="submit" value="Send" />
-            </div>
-            <div className={s.posts}>
-                {postsElements}
-            </div>
-        </div>
-    )
 }
 
-export default Posts;
+const PostsContainer = connect(mapStateToProps, mapDispatchToProps)(Posts)
+
+export default PostsContainer;

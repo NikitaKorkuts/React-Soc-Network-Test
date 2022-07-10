@@ -46,4 +46,3 @@ let Store = {
 }
 
 export default Store;
-window.store = Store;

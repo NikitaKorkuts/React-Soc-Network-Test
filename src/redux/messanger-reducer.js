@@ -1,5 +1,4 @@
 const ADD_MESSAGE = 'ADD_MESSAGE';
-const SET_MESSAGE_TEXT = 'SET_MESSAGE_TEXT';
 
 let initialState = {
     dialogs: [
@@ -15,8 +14,7 @@ let initialState = {
         {id: 1, message: 'Купите у нас дрель и получите пылесос в подарок!!'},
         {id: 2, message: 'Акция заканчивается сегодня, не упустите Ваш шанс!!!'},
         {id: 3, message: 'Спасибо, не интересует'}
-    ],
-    messageText: ''
+    ]
 };
 
 const messangerReducer = (state = initialState, action) => {
@@ -25,27 +23,14 @@ const messangerReducer = (state = initialState, action) => {
             let id = state.messages.length;
             return {
                 ...state,
-                messageText: '',
-                messages: [...state.messages, {id: id, message: state.messageText}]
+                messages: [...state.messages, {id: id, message: action.value}]
             }
-        case SET_MESSAGE_TEXT:
-            return {
-                ...state,
-                messageText: action.value
-            };
         default:
             return state;
     }
 }
 
-export const addMessageActionCreator = () => ({
-    type: ADD_MESSAGE
-});
-
-export const setMessageTextActionCreator = (value) => ({
-    type: SET_MESSAGE_TEXT,
-    value: value
-});
+export const addMessageActionCreator = (value) => ({type: ADD_MESSAGE, value});
 
 
 export default messangerReducer;

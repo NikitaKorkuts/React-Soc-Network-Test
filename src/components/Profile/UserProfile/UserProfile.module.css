@@ -1,0 +1,43 @@
+h1{
+    font-weight: 500;
+}
+
+.wallImg img {
+    width: 100%;
+    height: 200px;
+}
+
+.user {
+    display: flex;
+}
+
+.userAvatar {
+    margin-top: 30px;
+}
+
+.userAvatar img {
+    width: 220px;
+    height: 220px;
+}
+
+.userInfo {
+    margin-left: 40px;
+}
+
+.infoName p {
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.contact p{
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.contact a{
+    text-transform: none ;
+    font-size: 16px;
+    font-weight: 400;
+}
