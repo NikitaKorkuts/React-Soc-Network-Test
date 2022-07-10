@@ -1,0 +1,64 @@
+.message {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 15%;
+    align-self: end;
+}
+
+.avatar img {
+    width: 100%;
+}
+
+.text {
+    width: 75%;
+}
+
+p.bubble {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    line-height: 1.4em;
+    margin: 40px auto;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 30px;
+    font-family: sans-serif;
+    padding: 20px;
+    font-size: 16px;
+
+    margin-left: 20px;
+}
+
+p.bubble:before,
+p.bubble:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+p.speech:before,
+p.speech:after {
+    left: 10px;
+    bottom: -30px;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border: 2px solid #000;
+    -webkit-border-radius: 28px;
+    -moz-border-radius: 28px;
+    border-radius: 28px;
+}
+
+p.speech:after {
+    width: 20px;
+    height: 20px;
+    left: 5px;
+    bottom: -40px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    border-radius: 18px;
+}

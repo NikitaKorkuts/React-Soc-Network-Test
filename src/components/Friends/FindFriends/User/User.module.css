@@ -1,0 +1,27 @@
+.user {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}
+
+.userInfo{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.infoName p{
+    font-size: 25px;
+}
+
+.infoInfo {
+    margin-top: -10px;
+}
+
+.userAvatar img{
+    width: 120px;
+    height: 120px
+}
+
+.infoAddBtn input{
+    padding: 3px 20px;
+}
