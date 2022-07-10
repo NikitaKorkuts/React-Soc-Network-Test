@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/React-Soc-Network-Test/static/css/main.d748c85e.css",
+    "main.js": "/React-Soc-Network-Test/static/js/main.78549e76.js",
+    "static/css/718.e77259b1.chunk.css": "/React-Soc-Network-Test/static/css/718.e77259b1.chunk.css",
+    "static/js/718.eb98ca36.chunk.js": "/React-Soc-Network-Test/static/js/718.eb98ca36.chunk.js",
+    "static/css/481.d7b5dff8.chunk.css": "/React-Soc-Network-Test/static/css/481.d7b5dff8.chunk.css",
+    "static/js/481.f171082c.chunk.js": "/React-Soc-Network-Test/static/js/481.f171082c.chunk.js",
+    "static/css/842.6aad1754.chunk.css": "/React-Soc-Network-Test/static/css/842.6aad1754.chunk.css",
+    "static/js/842.cd0735b2.chunk.js": "/React-Soc-Network-Test/static/js/842.cd0735b2.chunk.js",
+    "static/js/787.9c4083a9.chunk.js": "/React-Soc-Network-Test/static/js/787.9c4083a9.chunk.js",
+    "static/js/434.3c885f06.chunk.js": "/React-Soc-Network-Test/static/js/434.3c885f06.chunk.js",
+    "static/media/defaultWallImg.jpg": "/React-Soc-Network-Test/static/media/defaultWallImg.4f0456f98dc70ee590c4.jpg",
+    "index.html": "/React-Soc-Network-Test/index.html",
+    "static/media/Rolling.svg": "/React-Soc-Network-Test/static/media/Rolling.e7c313e37d2a55297234791af9a37df1.svg",
+    "main.d748c85e.css.map": "/React-Soc-Network-Test/static/css/main.d748c85e.css.map",
+    "main.78549e76.js.map": "/React-Soc-Network-Test/static/js/main.78549e76.js.map",
+    "718.e77259b1.chunk.css.map": "/React-Soc-Network-Test/static/css/718.e77259b1.chunk.css.map",
+    "718.eb98ca36.chunk.js.map": "/React-Soc-Network-Test/static/js/718.eb98ca36.chunk.js.map",
+    "481.d7b5dff8.chunk.css.map": "/React-Soc-Network-Test/static/css/481.d7b5dff8.chunk.css.map",
+    "481.f171082c.chunk.js.map": "/React-Soc-Network-Test/static/js/481.f171082c.chunk.js.map",
+    "842.6aad1754.chunk.css.map": "/React-Soc-Network-Test/static/css/842.6aad1754.chunk.css.map",
+    "842.cd0735b2.chunk.js.map": "/React-Soc-Network-Test/static/js/842.cd0735b2.chunk.js.map",
+    "787.9c4083a9.chunk.js.map": "/React-Soc-Network-Test/static/js/787.9c4083a9.chunk.js.map",
+    "434.3c885f06.chunk.js.map": "/React-Soc-Network-Test/static/js/434.3c885f06.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d748c85e.css",
+    "static/js/main.78549e76.js"
+  ]
+}
